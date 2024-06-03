@@ -1,0 +1,417 @@
+
+CMD: cat /etc/redhat-release (Display Distribution information)
+
+CentOS Linux release 7.9.2009 (Core)
+
+CMD: lsb_release -a (Display Distribution information)
+
+
+CMD: date (Display Date of system)
+
+Thu May  9 09:00:07 UTC 2024
+
+CMD: ifconfig -a (Nic Card Details with Ips assigned)
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::20d:3aff:fe4d:680a  prefixlen 64  scopeid 0x20<link>
+        ether 00:0d:3a:4d:68:0a  txqueuelen 1000  (Ethernet)
+        RX packets 441500  bytes 984901464 (939.2 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 39411  bytes 4060054 (3.8 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth1: flags=6211<UP,BROADCAST,RUNNING,SLAVE,MULTICAST>  mtu 1500
+        ether 00:0d:3a:4d:68:0a  txqueuelen 1000  (Ethernet)
+        RX packets 659413  bytes 944314584 (900.5 MiB)
+        RX errors 0  dropped 986  overruns 0  frame 0
+        TX packets 39745  bytes 4082404 (3.8 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 64  bytes 5568 (5.4 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 64  bytes 5568 (5.4 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+CMD: df -Th (Filesystem with sizes and Type)
+
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        1.9G     0  1.9G   0% /dev
+tmpfs           1.9G     0  1.9G   0% /dev/shm
+tmpfs           1.9G   17M  1.9G   1% /run
+tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
+/dev/sda2        30G  3.2G   26G  11% /
+/dev/sda1       494M  101M  393M  21% /boot
+/dev/sda15      495M   12M  484M   3% /boot/efi
+tmpfs           379M     0  379M   0% /run/user/995
+tmpfs           379M     0  379M   0% /run/user/1000
+
+CMD: netstat -planetu (List of Services Running with their Ports)
+
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       User       Inode      PID/Program name    
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      0          63094      3945/master         
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      0          64665      4099/rpcbind        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      0          56070      29628/sshd          
+tcp        0      0 10.0.2.15:33206         13.66.147.148:443       TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54048         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54068         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54092         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54090         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54094         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54060         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54050         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:33204         13.66.147.148:443       TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54062         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:50380         20.83.221.118:443       TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:50376         20.83.221.118:443       TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:50378         20.83.221.118:443       TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54064         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54464         20.83.221.112:443       TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:58224         40.78.243.18:443        TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:50440         20.83.221.118:443       TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:22            10.0.2.6:34286          ESTABLISHED 0          124088     29952/sshd: suresh  
+tcp        0      0 10.0.2.15:54436         20.83.221.112:443       TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54096         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:50374         20.83.221.118:443       TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:54066         169.254.169.254:80      TIME_WAIT   0          0          -                   
+tcp        0      0 10.0.2.15:50372         20.83.221.118:443       TIME_WAIT   0          0          -                   
+tcp6       0      0 ::1:25                  :::*                    LISTEN      0          63095      3945/master         
+tcp6       0      0 :::111                  :::*                    LISTEN      0          64668      4099/rpcbind        
+tcp6       0      0 :::8084                 :::*                    LISTEN      995        121849     29810/npmd_agent    
+tcp6       0      0 :::22                   :::*                    LISTEN      0          56072      29628/sshd          
+udp        0      0 0.0.0.0:881             0.0.0.0:*                           0          64664      4099/rpcbind        
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           0          18069      918/dhclient        
+udp        0      0 0.0.0.0:111             0.0.0.0:*                           0          64663      4099/rpcbind        
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           0          16206      772/chronyd         
+udp        0      0 127.0.0.1:25224         0.0.0.0:*                           995        122756     29775/ruby          
+udp6       0      0 :::881                  :::*                                0          64667      4099/rpcbind        
+udp6       0      0 :::111                  :::*                                0          64666      4099/rpcbind        
+udp6       0      0 ::1:323                 :::*                                0          16207      772/chronyd         
+
+CMD: uptime (Server Uptime Details)
+
+ 09:00:07 up 30 min,  1 user,  load average: 0.17, 0.81, 0.59
+
+CMD: route -n (Routing Details)
+
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         10.0.2.1        0.0.0.0         UG    100    0        0 eth0
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 eth0
+168.63.129.16   10.0.2.1        255.255.255.255 UGH   100    0        0 eth0
+169.254.169.254 10.0.2.1        255.255.255.255 UGH   100    0        0 eth0
+
+CMD: chronyc sources (Chrony Sources)
+
+
+CMD: chronyd status (Chrony Status)
+
+* chronyd.service - NTP client/server
+   Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2024-05-09 08:29:50 UTC; 30min ago
+     Docs: man:chronyd(8)
+           man:chrony.conf(5)
+ Main PID: 772 (chronyd)
+   CGroup: /system.slice/chronyd.service
+           `-772 /usr/sbin/chronyd
+
+May 09 08:29:49 localhost.localdomain systemd[1]: Starting NTP client/server...
+May 09 08:29:49 localhost.localdomain chronyd[772]: chronyd version 3.4 starting (+CMDMON +NTP +REFCLOCK +RTC +PRIVDROP +SCFILTER +SIGND +ASYNCDNS +SECHASH +IPV6 +DEBUG)
+May 09 08:29:50 localhost.localdomain systemd[1]: Started NTP client/server.
+May 09 08:30:05 CENTOS-05 chronyd[772]: Selected source 15.204.198.96
+May 09 08:30:13 CENTOS-05 chronyd[772]: Selected source PHC0
+May 09 08:31:10 CENTOS-05 chronyd[772]: Source 69.10.223.130 replaced with 204.17.205.27
+
+CMD: uname -a (Print all information)
+
+Linux CENTOS-05 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+CMD: free -h (Memory Details)
+
+              total        used        free      shared  buff/cache   available
+Mem:           3.7G        398M        612M         16M        2.7G        3.0G
+Swap:            0B          0B          0B
+
+CMD: cat /etc/fstab (List of Mount Points in the directory)
+
+
+#
+# /etc/fstab
+# Created by anaconda on Thu Feb  4 18:20:41 2021
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+UUID=05c866bf-01b2-460f-a691-cb885c5fe6d6 /                       xfs     defaults        0 0
+UUID=4f6c775c-45fc-43c2-8a06-bbfca15886b4 /boot                   xfs     defaults        0 0
+UUID=AF94-5321          /boot/efi               vfat    defaults,uid=0,gid=0,umask=0077,shortname=winnt 0 0
+ephemeral0	/mnt/resource	auto	defaults,nofail,x-systemd.requires=cloud-init.service,comment=cloudconfig	0	2
+
+CMD: cat /proc/mounts (List of Mount Points)
+
+rootfs / rootfs rw 0 0
+sysfs /sys sysfs rw,seclabel,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+devtmpfs /dev devtmpfs rw,seclabel,nosuid,size=1928064k,nr_inodes=482016,mode=755 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,seclabel,nosuid,nodev 0 0
+devpts /dev/pts devpts rw,seclabel,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,seclabel,nosuid,nodev,mode=755 0 0
+tmpfs /sys/fs/cgroup tmpfs ro,seclabel,nosuid,nodev,noexec,mode=755 0 0
+cgroup /sys/fs/cgroup/systemd cgroup rw,seclabel,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
+cgroup /sys/fs/cgroup/net_cls,net_prio cgroup rw,seclabel,nosuid,nodev,noexec,relatime,net_prio,net_cls 0 0
+cgroup /sys/fs/cgroup/blkio cgroup rw,seclabel,nosuid,nodev,noexec,relatime,blkio 0 0
+cgroup /sys/fs/cgroup/perf_event cgroup rw,seclabel,nosuid,nodev,noexec,relatime,perf_event 0 0
+cgroup /sys/fs/cgroup/pids cgroup rw,seclabel,nosuid,nodev,noexec,relatime,pids 0 0
+cgroup /sys/fs/cgroup/cpuset cgroup rw,seclabel,nosuid,nodev,noexec,relatime,cpuset 0 0
+cgroup /sys/fs/cgroup/hugetlb cgroup rw,seclabel,nosuid,nodev,noexec,relatime,hugetlb 0 0
+cgroup /sys/fs/cgroup/memory cgroup rw,seclabel,nosuid,nodev,noexec,relatime,memory 0 0
+cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,seclabel,nosuid,nodev,noexec,relatime,cpuacct,cpu 0 0
+cgroup /sys/fs/cgroup/devices cgroup rw,seclabel,nosuid,nodev,noexec,relatime,devices 0 0
+cgroup /sys/fs/cgroup/freezer cgroup rw,seclabel,nosuid,nodev,noexec,relatime,freezer 0 0
+configfs /sys/kernel/config configfs rw,relatime 0 0
+/dev/sda2 / xfs rw,seclabel,relatime,attr2,inode64,noquota 0 0
+selinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,seclabel,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,relatime 0 0
+mqueue /dev/mqueue mqueue rw,seclabel,relatime 0 0
+/dev/sda1 /boot xfs rw,seclabel,relatime,attr2,inode64,noquota 0 0
+/dev/sda15 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=36,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=38335 0 0
+tmpfs /run/user/995 tmpfs rw,seclabel,nosuid,nodev,relatime,size=387996k,mode=700,uid=995,gid=992 0 0
+tmpfs /run/user/1000 tmpfs rw,seclabel,nosuid,nodev,relatime,size=387996k,mode=700,uid=1000,gid=1000 0 0
+
+CMD: cat /etc/exports (List of file systems Exported)
+
+
+CMD: (uname -r) Kernel Version
+
+3.10.0-1062.12.1.el7.x86_64
+
+CMD: ip addr list (List of IP Address)
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:0d:3a:4d:68:0a brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global noprefixroute eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20d:3aff:fe4d:680a/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc mq master eth0 state UP group default qlen 1000
+    link/ether 00:0d:3a:4d:68:0a brd ff:ff:ff:ff:ff:ff
+
+CMD: lsblk (Disk Allocated)
+
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda       8:0    0   30G  0 disk 
+|-sda1    8:1    0  500M  0 part /boot
+|-sda2    8:2    0   29G  0 part /
+|-sda14   8:14   0    4M  0 part 
+`-sda15   8:15   0  495M  0 part /boot/efi
+
+CMD: cat /proc/cpuinfo | grep -i processor | wc -l (Total Cpus)
+
+4
+
+CMD: dmidecode (Display Product details of Server)
+
+	Product Name: Virtual Machine
+	Product Name: Virtual Machine
+	Module Product ID: Unknown
+	Memory Subsystem Controller Product ID: Unknown
+	Module Product ID: Unknown
+	Memory Subsystem Controller Product ID: Unknown
+
+CMD: sestatus (Display SELinux status)
+
+SELinux status:                 enabled
+SELinuxfs mount:                /sys/fs/selinux
+SELinux root directory:         /etc/selinux
+
+CMD: cat /etc/sysconfig/network-scripts/ifcfg* (Display Nic Details) 
+
+# Created by cloud-init on instance boot automatically, do not edit.
+#
+BOOTPROTO=dhcp
+DEVICE=eth0
+HWADDR=00:0d:3a:4d:68:0a
+METRIC=100
+ONBOOT=yes
+STARTMODE=auto
+TYPE=Ethernet
+USERCTL=no
+DEVICE=lo
+IPADDR=127.0.0.1
+NETMASK=255.0.0.0
+NETWORK=127.0.0.0
+# If you're having problems with gated making 127.0.0.0/8 a martian,
+# you can change this to something else (255.255.255.255, for example)
+BROADCAST=127.255.255.255
+ONBOOT=yes
+NAME=loopback
+
+CMD: ps -ef (Display Process running) 
+
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 08:29 ?        00:00:04 /usr/lib/systemd/systemd --system --deserialize 16
+root         2     0  0 08:29 ?        00:00:00 [kthreadd]
+root         4     2  0 08:29 ?        00:00:00 [kworker/0:0H]
+root         6     2  0 08:29 ?        00:00:00 [ksoftirqd/0]
+root         7     2  0 08:29 ?        00:00:00 [migration/0]
+root         8     2  0 08:29 ?        00:00:00 [rcu_bh]
+root         9     2  0 08:29 ?        00:00:00 [rcu_sched]
+root        10     2  0 08:29 ?        00:00:00 [lru-add-drain]
+root        11     2  0 08:29 ?        00:00:00 [watchdog/0]
+root        12     2  0 08:29 ?        00:00:00 [watchdog/1]
+root        13     2  0 08:29 ?        00:00:00 [migration/1]
+root        14     2  0 08:29 ?        00:00:00 [ksoftirqd/1]
+root        16     2  0 08:29 ?        00:00:00 [kworker/1:0H]
+root        18     2  0 08:29 ?        00:00:00 [kdevtmpfs]
+root        19     2  0 08:29 ?        00:00:00 [netns]
+root        20     2  0 08:29 ?        00:00:00 [khungtaskd]
+root        21     2  0 08:29 ?        00:00:00 [writeback]
+root        22     2  0 08:29 ?        00:00:00 [kintegrityd]
+root        23     2  0 08:29 ?        00:00:00 [bioset]
+root        24     2  0 08:29 ?        00:00:00 [bioset]
+root        25     2  0 08:29 ?        00:00:00 [bioset]
+root        26     2  0 08:29 ?        00:00:00 [kblockd]
+root        27     2  0 08:29 ?        00:00:00 [md]
+root        28     2  0 08:29 ?        00:00:00 [edac-poller]
+root        29     2  0 08:29 ?        00:00:00 [watchdogd]
+root        36     2  0 08:29 ?        00:00:00 [kswapd0]
+root        37     2  0 08:29 ?        00:00:00 [ksmd]
+root        38     2  0 08:29 ?        00:00:00 [khugepaged]
+root        39     2  0 08:29 ?        00:00:00 [crypto]
+root        47     2  0 08:29 ?        00:00:00 [kthrotld]
+root        49     2  0 08:29 ?        00:00:00 [kmpath_rdacd]
+root        50     2  0 08:29 ?        00:00:00 [kaluad]
+root        51     2  0 08:29 ?        00:00:00 [kpsmoused]
+root        52     2  0 08:29 ?        00:00:00 [ipv6_addrconf]
+root        65     2  0 08:29 ?        00:00:00 [deferwq]
+root       153     2  0 08:29 ?        00:00:00 [kauditd]
+root       258     2  0 08:29 ?        00:00:00 [hv_vmbus_con]
+root       319     2  0 08:29 ?        00:00:00 [scsi_eh_0]
+root       321     2  0 08:29 ?        00:00:00 [scsi_tmf_0]
+root       323     2  0 08:29 ?        00:00:00 [storvsc_error_w]
+root       324     2  0 08:29 ?        00:00:00 [kworker/u4:2]
+root       325     2  0 08:29 ?        00:00:00 [scsi_eh_1]
+root       326     2  0 08:29 ?        00:00:00 [scsi_tmf_1]
+root       327     2  0 08:29 ?        00:00:00 [storvsc_error_w]
+root       335     2  0 08:29 ?        00:00:00 [kworker/0:1H]
+root       346     2  0 08:29 ?        00:00:00 [bioset]
+root       347     2  0 08:29 ?        00:00:00 [xfsalloc]
+root       348     2  0 08:29 ?        00:00:00 [xfs_mru_cache]
+root       349     2  0 08:29 ?        00:00:00 [xfs-buf/sda2]
+root       350     2  0 08:29 ?        00:00:00 [xfs-data/sda2]
+root       351     2  0 08:29 ?        00:00:00 [xfs-conv/sda2]
+root       352     2  0 08:29 ?        00:00:00 [xfs-cil/sda2]
+root       353     2  0 08:29 ?        00:00:00 [xfs-reclaim/sda]
+root       354     2  0 08:29 ?        00:00:00 [xfs-log/sda2]
+root       355     2  0 08:29 ?        00:00:00 [xfs-eofblocks/s]
+root       356     2  0 08:29 ?        00:00:00 [xfsaild/sda2]
+root       357     2  0 08:29 ?        00:00:00 [kworker/1:1H]
+root       456     1  0 08:29 ?        00:00:02 /usr/lib/systemd/systemd-journald
+root       520     2  0 08:29 ?        00:00:00 [hv_balloon]
+root       661     2  0 08:29 ?        00:00:00 [mlx5_health616b]
+root       662     2  0 08:29 ?        00:00:00 [mlx5_cmd_616b:0]
+root       663     2  0 08:29 ?        00:00:00 [mlx5_page_alloc]
+root       664     2  0 08:29 ?        00:00:00 [mlx5_fc]
+root       666     2  0 08:29 ?        00:00:00 [mlx5e]
+root       667     2  0 08:29 ?        00:00:00 [mlx5e_arfs]
+root       668     2  0 08:29 ?        00:00:00 [ib-comp-wq]
+root       669     2  0 08:29 ?        00:00:00 [kworker/u5:0]
+root       670     2  0 08:29 ?        00:00:00 [ib-comp-unb-wq]
+root       671     2  0 08:29 ?        00:00:00 [ib_mcast]
+root       672     2  0 08:29 ?        00:00:00 [ib_nl_sa_wq]
+root       676     2  0 08:29 ?        00:00:00 [xfs-buf/sda1]
+root       678     2  0 08:29 ?        00:00:00 [xfs-data/sda1]
+root       679     2  0 08:29 ?        00:00:00 [xfs-conv/sda1]
+root       681     2  0 08:29 ?        00:00:00 [xfs-cil/sda1]
+root       682     2  0 08:29 ?        00:00:00 [xfs-reclaim/sda]
+root       683     2  0 08:29 ?        00:00:00 [xfs-log/sda1]
+root       684     2  0 08:29 ?        00:00:00 [xfs-eofblocks/s]
+root       685     2  0 08:29 ?        00:00:00 [xfsaild/sda1]
+root       688     2  0 08:29 ?        00:00:00 [mkey_cache]
+root       730     1  0 08:29 ?        00:00:00 /sbin/auditd
+libstor+   762     1  0 08:29 ?        00:00:00 /usr/bin/lsmd -d
+dbus       764     1  0 08:29 ?        00:00:01 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+chrony     772     1  0 08:29 ?        00:00:00 /usr/sbin/chronyd
+root       780     1  0 08:29 ?        00:00:00 /usr/sbin/irqbalance --foreground
+root       782     1  0 08:29 ?        00:00:00 /usr/lib/systemd/systemd-logind
+root       880     1  0 08:29 ?        00:00:00 /usr/sbin/NetworkManager --no-daemon
+root       918   880  0 08:29 ?        00:00:00 /sbin/dhclient -d -q -sf /usr/libexec/nm-dhcp-helper -pf /var/run/dhclient-eth0.pid -lf /var/lib/NetworkManager/dhclient-5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03-eth0.lease -cf /var/lib/NetworkManager/dhclient-eth0.conf eth0
+root      1122     1  0 08:29 ?        00:00:00 /usr/sbin/hypervkvpd -n
+root      2536     1  0 08:32 ttyS0    00:00:00 /sbin/agetty --keep-baud 115200,38400,9600 ttyS0 vt220
+root      2537     1  0 08:32 tty1     00:00:00 /sbin/agetty --noclear tty1 linux
+root      3945     1  0 08:53 ?        00:00:00 /usr/libexec/postfix/master -w
+postfix   3946  3945  0 08:53 ?        00:00:00 pickup -l -t unix -u
+postfix   3947  3945  0 08:53 ?        00:00:00 qmgr -l -t unix -u
+root      4037     1  0 08:53 ?        00:00:00 /usr/sbin/lvmetad -f
+rpc       4099     1  0 08:53 ?        00:00:00 /sbin/rpcbind -w
+root      4172     1  0 08:53 ?        00:00:00 /usr/sbin/smartd -n -q never
+root      4231     1  0 08:53 ?        00:00:00 /usr/sbin/crond -n
+root      4354     1  0 08:53 ?        00:00:00 /sbin/rngd -f
+polkitd   4457     1  0 08:53 ?        00:00:00 /usr/lib/polkit-1/polkitd --no-debug
+root      4469     1  0 08:53 ?        00:00:00 /usr/bin/python2 -Es /usr/sbin/tuned -l -P
+root      4510     1  0 08:53 ?        00:00:00 /usr/sbin/atd -f
+root      9149     2  0 08:40 ?        00:00:00 [kworker/0:1]
+root      9154     2  0 08:42 ?        00:00:00 [kworker/u4:1]
+root      9157     2  0 08:45 ?        00:00:00 [kworker/0:0]
+root     10900     1  0 08:50 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+root     11288     2  0 08:51 ?        00:00:00 [kworker/u4:0]
+root     27695     2  0 08:57 ?        00:00:00 [kworker/u4:3]
+root     28009     1  0 08:57 ?        00:00:00 /opt/omi/bin/omiserver -d
+omi      28010 28009  0 08:57 ?        00:00:00 /opt/omi/bin/omiengine -d --logfilefd 3 --socketpair 9
+omsagent 28374 28009  0 08:57 ?        00:00:00 /opt/omi/bin/omiagent 9 10 --destdir / --providerdir /opt/omi/lib --loglevel WARNING
+root     28419 28009  0 08:57 ?        00:00:00 /opt/omi/bin/omiagent 9 10 --destdir / --providerdir /opt/omi/lib --loglevel WARNING
+root     28521     1  0 08:57 ?        00:00:00 python2 /var/lib/waagent/Microsoft.EnterpriseCloud.Monitoring.OmsAgentForLinux-1.19.0/omsagent.py -telemetry
+root     28574     2  0 08:58 ?        00:00:00 [kworker/0:2]
+omsagent 28779     1  0 08:59 ?        00:00:00 sleep 60
+omsagent 28792     1  0 08:59 ?        00:00:00 sh -c ((which python2 > /dev/null 2>&1 && python2 /opt/microsoft/omsconfig/Scripts/PerformInventory.py --InMOF /etc/opt/microsoft/omsagent/conf/omsagent.d/patch_management_inventory.mof --OutXML /etc/opt/omi/conf/omsconfig/configuration/CompletePackageInventory.xml > /dev/null) || (which python3 > /dev/null 2>&1 && python3 /opt/microsoft/omsconfig/Scripts/python3/PerformInventory.py --InMOF /etc/opt/microsoft/omsagent/conf/omsagent.d/patch_management_inventory.mof --OutXML /etc/opt/omi/conf/omsconfig/configuration/CompletePackageInventory.xml > /dev/null)) && cat /etc/opt/omi/conf/omsconfig/configuration/CompletePackageInventory.xml
+omsagent 28793 28792  0 08:59 ?        00:00:00 sh -c ((which python2 > /dev/null 2>&1 && python2 /opt/microsoft/omsconfig/Scripts/PerformInventory.py --InMOF /etc/opt/microsoft/omsagent/conf/omsagent.d/patch_management_inventory.mof --OutXML /etc/opt/omi/conf/omsconfig/configuration/CompletePackageInventory.xml > /dev/null) || (which python3 > /dev/null 2>&1 && python3 /opt/microsoft/omsconfig/Scripts/python3/PerformInventory.py --InMOF /etc/opt/microsoft/omsagent/conf/omsagent.d/patch_management_inventory.mof --OutXML /etc/opt/omi/conf/omsconfig/configuration/CompletePackageInventory.xml > /dev/null)) && cat /etc/opt/omi/conf/omsconfig/configuration/CompletePackageInventory.xml
+omsagent 28795     1  0 08:59 ?        00:00:00 sleep 60
+omsagent 28800 28793  0 08:59 ?        00:00:00 python2 /opt/microsoft/omsconfig/Scripts/PerformInventory.py --InMOF /etc/opt/microsoft/omsagent/conf/omsagent.d/patch_management_inventory.mof --OutXML /etc/opt/omi/conf/omsconfig/configuration/CompletePackageInventory.xml
+root     28848     2  0 08:52 ?        00:00:00 [kworker/1:15]
+root     28849     2  0 08:52 ?        00:00:00 [kworker/1:16]
+root     28851     1  0 08:59 ?        00:00:00 /usr/sbin/rsyslogd -n
+root     28886     1  0 08:53 ?        00:00:00 /usr/bin/python -u /usr/sbin/waagent -daemon
+omsagent 28933     1  0 08:59 ?        00:00:00 sleep 60
+omsagent 28950     1  0 08:59 ?        00:00:00 sleep 60
+omsagent 29069     1  0 08:59 ?        00:00:00 sleep 60
+omsagent 29087     1  0 08:59 ?        00:00:00 sleep 60
+nxautom+ 29231     1  0 08:59 ?        00:00:00 python2 /opt/microsoft/omsconfig/modules/nxOMSAutomationWorker/DSCResources/MSFT_nxOMSAutomationWorkerResource/automationworker/worker/main.py /var/opt/microsoft/omsagent/state/automationworker/oms.conf rworkspace:552b9630-b106-4fe7-a1fa-97d04a0010ef 1.10.0.0
+nxautom+ 29272     1  0 08:59 ?        00:00:00 python2 /opt/microsoft/omsconfig/modules/nxOMSAutomationWorker/DSCResources/MSFT_nxOMSAutomationWorkerResource/automationworker/worker/hybridworker.py /var/opt/microsoft/omsagent/state/automationworker/worker.conf managed rworkspace:552b9630-b106-4fe7-a1fa-97d04a0010ef rversion:1.10.0.0
+omsagent 29434     1  0 08:59 ?        00:00:00 sleep 60
+omsagent 29469     1  0 08:59 ?        00:00:00 sleep 60
+root     29518 28886  0 08:53 ?        00:00:02 /usr/bin/python -u bin/WALinuxAgent-2.10.0.8-py3.9.egg -run-exthandlers
+root     29628     1  0 08:53 ?        00:00:00 /usr/sbin/sshd -D
+omsagent 29775     1  0 08:59 ?        00:00:00 /opt/microsoft/omsagent/ruby/bin/ruby /opt/microsoft/omsagent/bin/omsagent -d /var/opt/microsoft/omsagent/552b9630-b106-4fe7-a1fa-97d04a0010ef/run/omsagent.pid -o /var/opt/microsoft/omsagent/552b9630-b106-4fe7-a1fa-97d04a0010ef/log/omsagent.log -c /etc/opt/microsoft/omsagent/552b9630-b106-4fe7-a1fa-97d04a0010ef/conf/omsagent.conf --no-supervisor
+omsagent 29799 29775  0 08:59 ?        00:00:00 sh -c sleep 60 && sudo /opt/microsoft/omsagent/ruby/bin/ruby /opt/microsoft/omsagent/plugin/collectantimalwareinfo.rb
+omsagent 29800 29799  0 08:59 ?        00:00:00 sleep 60
+omsagent 29810 29775  0 08:59 ?        00:00:00 /opt/microsoft/omsagent/plugin/npmd_agent
+omsagent 29819 29775  0 08:59 ?        00:00:00 sh -c sleep 60 && /opt/microsoft/omsagent/plugin/omsbaseline -d /opt/microsoft/omsagent/plugin/
+omsagent 29821 29819  0 08:59 ?        00:00:00 sleep 60
+root     29948     2  0 09:00 ?        00:00:00 [kworker/1:0]
+root     29950     2  0 09:00 ?        00:00:00 [kworker/1:1]
+root     29952 29628  5 09:00 ?        00:00:00 sshd: suresh [priv]
+suresh   29956 29952  0 09:00 ?        00:00:00 sshd: suresh@pts/0
+suresh   30090 29956  0 09:00 pts/0    00:00:00 /bin/sh -c sudo -H -S  -p "[sudo via ansible, key=drvgegxofvhsbqunzzbtnppqydqunpka] password:" -u root /bin/sh -c 'echo BECOME-SUCCESS-drvgegxofvhsbqunzzbtnppqydqunpka ; /usr/bin/python /home/suresh/.ansible/tmp/ansible-tmp-1715245207.647534-206994715007618/AnsiballZ_command.py' && sleep 0
+root     30106 30090  0 09:00 pts/0    00:00:00 sudo -H -S -p [sudo via ansible, key=drvgegxofvhsbqunzzbtnppqydqunpka] password: -u root /bin/sh -c echo BECOME-SUCCESS-drvgegxofvhsbqunzzbtnppqydqunpka ; /usr/bin/python /home/suresh/.ansible/tmp/ansible-tmp-1715245207.647534-206994715007618/AnsiballZ_command.py
+root     30108 30106  0 09:00 pts/0    00:00:00 /bin/sh -c echo BECOME-SUCCESS-drvgegxofvhsbqunzzbtnppqydqunpka ; /usr/bin/python /home/suresh/.ansible/tmp/ansible-tmp-1715245207.647534-206994715007618/AnsiballZ_command.py
+root     30109 30108  5 09:00 pts/0    00:00:00 /usr/bin/python /home/suresh/.ansible/tmp/ansible-tmp-1715245207.647534-206994715007618/AnsiballZ_command.py
+root     30114 30109  0 09:00 pts/0    00:00:00 /bin/sh -c (echo -e ' CMD: cat /etc/redhat-release (Display Distribution information) '; cat /etc/redhat-release; echo -e ' CMD: lsb_release -a (Display Distribution information) '; lsb_release -a; echo -e ' CMD: date (Display Date of system) '; date; echo -e ' CMD: ifconfig -a (Nic Card Details with Ips assigned) '; ifconfig -a; echo -e ' CMD: df -Th (Filesystem with sizes and Type) '; df -h; echo -e ' CMD: netstat -planetu (List of Services Running with their Ports) '; netstat -planetu; echo -e ' CMD: uptime (Server Uptime Details) '; uptime; echo -e ' CMD: route -n (Routing Details) '; route -n; echo -e ' CMD: chronyc sources (Chrony Sources) '; chronyc sources; echo -e ' CMD: chronyd status (Chrony Status) '; systemctl status chronyd; echo -e ' CMD: uname -a (Print all information) '; uname -a; echo -e ' CMD: free -h (Memory Details) '; free -h; echo -e ' CMD: cat /etc/fstab (List of Mount Points in the directory) '; cat /etc/fstab; echo -e ' CMD: cat /proc/mounts (List of Mount Points) '; cat /proc/mounts; echo -e ' CMD: cat /etc/exports (List of file systems Exported) '; cat /etc/exports; echo -e ' CMD: (uname -r) Kernel Version '; uname -r; echo -e ' CMD: ip addr list (List of IP Address) '; ip addr list; echo -e ' CMD: lsblk (Disk Allocated) '; lsblk; echo -e ' CMD: cat /proc/cpuinfo | grep -i processor | wc -l (Total Cpus) '; cat /proc/cpuinfo | grep -i processor | wc -l; echo -e ' CMD: dmidecode (Display Product details of Server) '; dmidecode | grep -i Product; echo -e ' CMD: sestatus (Display SELinux status) '; sestatus | grep -i SELinux; echo -e ' CMD: cat /etc/sysconfig/network-scripts/ifcfg* (Display Nic Details)  '; cat /etc/sysconfig/network-scripts/ifcfg*; echo -e ' CMD: ps -ef (Display Process running)  '; ps -ef;) > Afterartifacts.txt
+root     30115 30114  0 09:00 pts/0    00:00:00 /bin/sh -c (echo -e ' CMD: cat /etc/redhat-release (Display Distribution information) '; cat /etc/redhat-release; echo -e ' CMD: lsb_release -a (Display Distribution information) '; lsb_release -a; echo -e ' CMD: date (Display Date of system) '; date; echo -e ' CMD: ifconfig -a (Nic Card Details with Ips assigned) '; ifconfig -a; echo -e ' CMD: df -Th (Filesystem with sizes and Type) '; df -h; echo -e ' CMD: netstat -planetu (List of Services Running with their Ports) '; netstat -planetu; echo -e ' CMD: uptime (Server Uptime Details) '; uptime; echo -e ' CMD: route -n (Routing Details) '; route -n; echo -e ' CMD: chronyc sources (Chrony Sources) '; chronyc sources; echo -e ' CMD: chronyd status (Chrony Status) '; systemctl status chronyd; echo -e ' CMD: uname -a (Print all information) '; uname -a; echo -e ' CMD: free -h (Memory Details) '; free -h; echo -e ' CMD: cat /etc/fstab (List of Mount Points in the directory) '; cat /etc/fstab; echo -e ' CMD: cat /proc/mounts (List of Mount Points) '; cat /proc/mounts; echo -e ' CMD: cat /etc/exports (List of file systems Exported) '; cat /etc/exports; echo -e ' CMD: (uname -r) Kernel Version '; uname -r; echo -e ' CMD: ip addr list (List of IP Address) '; ip addr list; echo -e ' CMD: lsblk (Disk Allocated) '; lsblk; echo -e ' CMD: cat /proc/cpuinfo | grep -i processor | wc -l (Total Cpus) '; cat /proc/cpuinfo | grep -i processor | wc -l; echo -e ' CMD: dmidecode (Display Product details of Server) '; dmidecode | grep -i Product; echo -e ' CMD: sestatus (Display SELinux status) '; sestatus | grep -i SELinux; echo -e ' CMD: cat /etc/sysconfig/network-scripts/ifcfg* (Display Nic Details)  '; cat /etc/sysconfig/network-scripts/ifcfg*; echo -e ' CMD: ps -ef (Display Process running)  '; ps -ef;) > Afterartifacts.txt
+root     30142 30115  0 09:00 pts/0    00:00:00 ps -ef

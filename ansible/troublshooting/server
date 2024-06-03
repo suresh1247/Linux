@@ -1,0 +1,4 @@
+[linux]
+10.0.2.7 ansible_connection=ssh ansible_ssh_port=22 ansible_ssh_user=suresh ansible_ssh_pass="ctrls@1234$#$" ansible_sudo_pass="ctrls@1234$#$"
+10.0.2.8 ansible_connection=ssh ansible_ssh_port=22 ansible_ssh_user=suresh ansible_ssh_pass="ctrls@1234$#$" ansible_sudo_pass="ctrls@1234$#$"
+10.0.2.4 ansible_connection=ssh ansible_ssh_port=22 ansible_ssh_user=azureuser ansible_ssh_pass="ctrls@1234$#$" ansible_sudo_pass="ctrls@1234$#$"

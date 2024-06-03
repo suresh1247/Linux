@@ -1,0 +1,29 @@
+-e 
+CMD: list packages for update 
+
+Hit:1 http://azure.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 http://azure.archive.ubuntu.com/ubuntu focal-security InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+17 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Listing...
+cpio/focal-updates,focal-security 2.13+dfsg-2ubuntu0.4 amd64 [upgradable from: 2.13+dfsg-2ubuntu0.3]
+distro-info-data/focal-updates,focal-security 0.43ubuntu1.16 all [upgradable from: 0.43ubuntu1.15]
+landscape-common/focal-updates 23.02-0ubuntu1~20.04.2 amd64 [upgradable from: 19.12-0ubuntu4.3]
+less/focal-updates,focal-security 551-1ubuntu0.3 amd64 [upgradable from: 551-1ubuntu0.2]
+linux-azure/focal-updates,focal-security 5.15.0.1063.72~20.04.1 amd64 [upgradable from: 5.15.0.1061.70~20.04.1]
+linux-cloud-tools-azure/focal-updates,focal-security 5.15.0.1063.72~20.04.1 amd64 [upgradable from: 5.15.0.1061.70~20.04.1]
+linux-cloud-tools-common/focal-updates,focal-security 5.4.0-181.201 all [upgradable from: 5.4.0-177.197]
+linux-headers-azure/focal-updates,focal-security 5.15.0.1063.72~20.04.1 amd64 [upgradable from: 5.15.0.1061.70~20.04.1]
+linux-image-azure/focal-updates,focal-security 5.15.0.1063.72~20.04.1 amd64 [upgradable from: 5.15.0.1061.70~20.04.1]
+linux-tools-azure/focal-updates,focal-security 5.15.0.1063.72~20.04.1 amd64 [upgradable from: 5.15.0.1061.70~20.04.1]
+linux-tools-common/focal-updates,focal-security 5.4.0-181.201 all [upgradable from: 5.4.0-177.197]
+python3-update-manager/focal-updates 1:20.04.10.21 all [upgradable from: 1:20.04.10.20]
+snapd/focal-updates 2.62+20.04 amd64 [upgradable from: 2.61.3+20.04]
+ubuntu-advantage-tools/focal-updates 31.2.3~20.04 all [upgradable from: 31.2.2~20.04]
+ubuntu-pro-client-l10n/focal-updates 31.2.3~20.04 amd64 [upgradable from: 31.2.2~20.04]
+ubuntu-pro-client/focal-updates 31.2.3~20.04 amd64 [upgradable from: 31.2.2~20.04]
+update-manager-core/focal-updates 1:20.04.10.21 all [upgradable from: 1:20.04.10.20]

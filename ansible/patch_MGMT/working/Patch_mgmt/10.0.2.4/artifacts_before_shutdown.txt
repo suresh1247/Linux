@@ -1,0 +1,328 @@
+-e 
+CMD: cat /etc/redhat-release (Display Distribution information)
+
+-e 
+CMD: lsb_release -a (Display Distribution information)
+
+Distributor ID:	Ubuntu
+Description:	Ubuntu 16.04.7 LTS
+Release:	16.04
+Codename:	xenial
+-e 
+CMD: date (Display Date of system)
+
+Wed May  1 17:05:05 UTC 2024
+-e 
+CMD: ifconfig -a (Nic Card Details with Ips assigned)
+
+eth0      Link encap:Ethernet  HWaddr 7c:1e:52:1a:92:3f  
+          inet addr:10.0.2.4  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::7e1e:52ff:fe1a:923f/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:758 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:558 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:603823 (603.8 KB)  TX bytes:151820 (151.8 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:168 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:168 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:13068 (13.0 KB)  TX bytes:13068 (13.0 KB)
+
+-e 
+CMD: df -Th (Filesystem with sizes and Type)
+
+Filesystem      Size  Used Avail Use% Mounted on
+udev            1.7G     0  1.7G   0% /dev
+tmpfs           345M  5.0M  340M   2% /run
+/dev/sda1        29G  1.8G   28G   6% /
+tmpfs           1.7G     0  1.7G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           1.7G     0  1.7G   0% /sys/fs/cgroup
+/dev/sda15      105M  3.2M  102M   3% /boot/efi
+/dev/sdb1       6.8G   16M  6.4G   1% /mnt
+tmpfs           345M     0  345M   0% /run/user/1000
+-e 
+CMD: netstat -planetu (List of Services Running with their Ports)
+
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       User       Inode       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      0          18476       1324/sshd       
+tcp        0      0 10.0.2.4:33916          168.63.129.16:80        TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:46492          40.78.253.213:443       TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:38338          13.66.147.148:443       TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:50584          185.125.190.39:80       TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:40110          40.78.243.18:443        TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:39624          169.254.169.254:80      TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:39682          169.254.169.254:80      TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:38318          13.66.147.148:443       TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:39684          169.254.169.254:80      TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:33912          168.63.129.16:80        TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:52808          20.83.221.112:443       TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:33914          168.63.129.16:80        TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:39626          169.254.169.254:80      TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:40108          40.78.243.18:443        TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:46472          40.78.253.213:443       TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:40574          52.147.219.192:80       TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:52798          20.83.221.112:443       TIME_WAIT   0          0           -               
+tcp        0      0 10.0.2.4:22             10.0.2.6:32900          ESTABLISHED 0          23948       2282/sshd: azureuse
+tcp6       0      0 :::8084                 :::*                    LISTEN      998        21080       1656/npmd_agent 
+tcp6       0      0 :::22                   :::*                    LISTEN      0          18478       1324/sshd       
+udp        0      0 127.0.0.1:25224         0.0.0.0:*                           998        20968       1590/ruby       
+udp        0      0 0.0.0.0:42789           0.0.0.0:*                           104        17131       1249/rsyslogd   
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           0          15709       1061/dhclient   
+-e 
+CMD: uptime (Server Uptime Details)
+
+ 17:05:05 up 0 min,  1 user,  load average: 1.64, 0.50, 0.17
+-e 
+CMD: route -n (Routing Details)
+
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         10.0.2.1        0.0.0.0         UG    0      0        0 eth0
+10.0.2.0        0.0.0.0         255.255.255.0   U     0      0        0 eth0
+168.63.129.16   10.0.2.1        255.255.255.255 UGH   0      0        0 eth0
+169.254.169.254 10.0.2.1        255.255.255.255 UGH   0      0        0 eth0
+-e 
+CMD: chronyc sources (Chrony Sources)
+
+-e 
+CMD: chronyd status (Chrony Status)
+
+● chronyd.service
+   Loaded: not-found (Reason: No such file or directory)
+   Active: inactive (dead)
+-e 
+CMD: uname -a (Print all information)
+
+Linux devlinux-vm1 4.15.0-1113-azure #126~16.04.1-Ubuntu SMP Tue Apr 13 16:55:24 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+-e 
+CMD: free -h (Memory Details)
+
+              total        used        free      shared  buff/cache   available
+Mem:           3.4G        231M        2.5G        4.9M        657M        2.9G
+Swap:            0B          0B          0B
+-e 
+CMD: cat /etc/fstab (List of Mount Points in the directory)
+
+# CLOUD_IMG: This file was created/modified by the Cloud Image build process
+UUID=dcc4cfd4-06c2-44f7-b16f-9e2e9410521f	/	 ext4	defaults,discard	0 1
+UUID=C52D-06E6	/boot/efi	vfat	umask=0077	0 1
+/dev/disk/cloud/azure_resource-part1	/mnt	auto	defaults,nofail,x-systemd.requires=cloud-init.service,comment=cloudconfig	0	2
+-e 
+CMD: cat /proc/mounts (List of Mount Points)
+
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,nosuid,relatime,size=1751960k,nr_inodes=437990,mode=755 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,noexec,relatime,size=352436k,mode=755 0 0
+/dev/sda1 / ext4 rw,relatime,discard,data=ordered 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0
+tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k 0 0
+tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0
+cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/lib/systemd/systemd-cgroups-agent,name=systemd 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0
+cgroup /sys/fs/cgroup/net_cls,net_prio cgroup rw,nosuid,nodev,noexec,relatime,net_cls,net_prio 0 0
+cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0
+cgroup /sys/fs/cgroup/rdma cgroup rw,nosuid,nodev,noexec,relatime,rdma 0 0
+cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0
+cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpu,cpuacct 0 0
+cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0
+cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0
+cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0
+cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0
+cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=23,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=11599 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0
+mqueue /dev/mqueue mqueue rw,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,relatime 0 0
+fusectl /sys/fs/fuse/connections fusectl rw,relatime 0 0
+configfs /sys/kernel/config configfs rw,relatime 0 0
+/dev/sda15 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0 0
+/dev/sdb1 /mnt ext4 rw,relatime,data=ordered 0 0
+lxcfs /var/lib/lxcfs fuse.lxcfs rw,nosuid,nodev,relatime,user_id=0,group_id=0,allow_other 0 0
+tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=352436k,mode=700,uid=1000,gid=1000 0 0
+-e 
+CMD: cat /etc/exports (List of file systems Exported)
+
+-e 
+CMD: (uname -r) Kernel Version
+
+4.15.0-1113-azure
+-e 
+CMD: ip addr list (List of IP Address)
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 7c:1e:52:1a:92:3f brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.4/24 brd 10.0.2.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7e1e:52ff:fe1a:923f/64 scope link 
+       valid_lft forever preferred_lft forever
+-e 
+CMD: lsblk (Disk Allocated)
+
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sdb       8:16   0    7G  0 disk 
+└─sdb1    8:17   0    7G  0 part /mnt
+sda       8:0    0   30G  0 disk 
+├─sda14   8:14   0    4M  0 part 
+├─sda15   8:15   0  106M  0 part /boot/efi
+└─sda1    8:1    0 29.9G  0 part /
+-e 
+CMD: cat /proc/cpuinfo | grep -i processor | wc -l (Total Cpus)
+
+1
+-e 
+CMD: dmidecode (Display Product details of Server)
+
+	Product Name: Virtual Machine
+	Product Name: Virtual Machine
+-e 
+CMD: sestatus (Display SELinux status)
+
+-e 
+CMD: cat /etc/sysconfig/network-scripts/ifcfg* (Display Nic Details) 
+
+-e 
+CMD: ps -ef (Display Process running) 
+
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  5 17:04 ?        00:00:02 /sbin/init
+root         2     0  0 17:04 ?        00:00:00 [kthreadd]
+root         3     2  0 17:04 ?        00:00:00 [kworker/0:0]
+root         4     2  0 17:04 ?        00:00:00 [kworker/0:0H]
+root         5     2  0 17:04 ?        00:00:00 [kworker/u2:0]
+root         6     2  0 17:04 ?        00:00:00 [mm_percpu_wq]
+root         7     2  0 17:04 ?        00:00:00 [ksoftirqd/0]
+root         8     2  0 17:04 ?        00:00:00 [rcu_sched]
+root         9     2  0 17:04 ?        00:00:00 [rcu_bh]
+root        10     2  0 17:04 ?        00:00:00 [migration/0]
+root        11     2  0 17:04 ?        00:00:00 [watchdog/0]
+root        12     2  0 17:04 ?        00:00:00 [cpuhp/0]
+root        13     2  0 17:04 ?        00:00:00 [kdevtmpfs]
+root        14     2  0 17:04 ?        00:00:00 [netns]
+root        15     2  0 17:04 ?        00:00:00 [rcu_tasks_kthre]
+root        16     2  0 17:04 ?        00:00:00 [kauditd]
+root        17     2  0 17:04 ?        00:00:00 [khungtaskd]
+root        18     2  0 17:04 ?        00:00:00 [oom_reaper]
+root        19     2  0 17:04 ?        00:00:00 [writeback]
+root        20     2  0 17:04 ?        00:00:00 [kcompactd0]
+root        21     2  0 17:04 ?        00:00:00 [ksmd]
+root        22     2  0 17:04 ?        00:00:00 [khugepaged]
+root        23     2  0 17:04 ?        00:00:00 [crypto]
+root        24     2  0 17:04 ?        00:00:00 [kintegrityd]
+root        25     2  0 17:04 ?        00:00:00 [kblockd]
+root        26     2  0 17:04 ?        00:00:00 [ata_sff]
+root        27     2  0 17:04 ?        00:00:00 [md]
+root        28     2  0 17:04 ?        00:00:00 [edac-poller]
+root        29     2  0 17:04 ?        00:00:00 [hv_vmbus_con]
+root        30     2  0 17:04 ?        00:00:00 [hv_pri_chan]
+root        31     2  0 17:04 ?        00:00:00 [hv_sub_chan]
+root        32     2  0 17:04 ?        00:00:00 [devfreq_wq]
+root        33     2  0 17:04 ?        00:00:00 [kworker/0:1]
+root        34     2  0 17:04 ?        00:00:00 [watchdogd]
+root        35     2  0 17:04 ?        00:00:00 [kworker/u2:1]
+root        37     2  0 17:04 ?        00:00:00 [kswapd0]
+root        38     2  0 17:04 ?        00:00:00 [kworker/u3:0]
+root        39     2  0 17:04 ?        00:00:00 [ecryptfs-kthrea]
+root        81     2  0 17:04 ?        00:00:00 [kthrotld]
+root        82     2  0 17:04 ?        00:00:00 [nfit]
+root        83     2  0 17:04 ?        00:00:00 [scsi_eh_0]
+root        84     2  0 17:04 ?        00:00:00 [scsi_tmf_0]
+root        85     2  0 17:04 ?        00:00:00 [storvsc_error_w]
+root        86     2  0 17:04 ?        00:00:00 [scsi_eh_1]
+root        87     2  0 17:04 ?        00:00:00 [scsi_tmf_1]
+root        88     2  0 17:04 ?        00:00:00 [storvsc_error_w]
+root        89     2  0 17:04 ?        00:00:00 [scsi_eh_2]
+root        90     2  0 17:04 ?        00:00:00 [scsi_tmf_2]
+root        91     2  0 17:04 ?        00:00:00 [storvsc_error_w]
+root        92     2  0 17:04 ?        00:00:00 [scsi_eh_3]
+root        93     2  0 17:04 ?        00:00:00 [scsi_tmf_3]
+root        94     2  0 17:04 ?        00:00:00 [storvsc_error_w]
+root        95     2  0 17:04 ?        00:00:00 [kworker/u2:2]
+root        96     2  0 17:04 ?        00:00:00 [kworker/u2:3]
+root        97     2  0 17:04 ?        00:00:00 [nvme-wq]
+root        98     2  0 17:04 ?        00:00:00 [scsi_eh_4]
+root        99     2  0 17:04 ?        00:00:00 [scsi_tmf_4]
+root       100     2  0 17:04 ?        00:00:00 [scsi_eh_5]
+root       101     2  0 17:04 ?        00:00:00 [scsi_tmf_5]
+root       102     2  0 17:04 ?        00:00:00 [kworker/u2:4]
+root       103     2  0 17:04 ?        00:00:00 [kworker/u2:5]
+root       107     2  0 17:04 ?        00:00:00 [ipv6_addrconf]
+root       116     2  0 17:04 ?        00:00:00 [kstrp]
+root       303     2  0 17:04 ?        00:00:00 [raid5wq]
+root       360     2  0 17:04 ?        00:00:00 [kworker/0:1H]
+root       362     2  0 17:04 ?        00:00:00 [jbd2/sda1-8]
+root       363     2  0 17:04 ?        00:00:00 [ext4-rsv-conver]
+root       425     2  0 17:04 ?        00:00:00 [kworker/0:2]
+root       430     2  0 17:04 ?        00:00:00 [iscsi_eh]
+root       440     2  0 17:04 ?        00:00:00 [ib-comp-wq]
+root       442     2  0 17:04 ?        00:00:00 [ib-comp-unb-wq]
+root       445     2  0 17:04 ?        00:00:00 [ib_mcast]
+root       446     1  0 17:04 ?        00:00:00 /lib/systemd/systemd-journald
+root       447     2  0 17:04 ?        00:00:00 [ib_nl_sa_wq]
+root       450     2  0 17:04 ?        00:00:00 [rdma_cm]
+root       453     1  0 17:04 ?        00:00:00 /sbin/lvmetad -f
+root       464     2  0 17:04 ?        00:00:00 [kworker/0:3]
+root       469     1  0 17:04 ?        00:00:00 /lib/systemd/systemd-udevd
+root       520     2  0 17:04 ?        00:00:00 [hv_balloon]
+root       557     1  0 17:04 ?        00:00:00 /usr/lib/linux-tools/4.15.0-1113-azure/hv_kvp_daemon -n
+systemd+   705     1  0 17:04 ?        00:00:00 /lib/systemd/systemd-timesyncd
+root      1061     1  0 17:04 ?        00:00:00 /sbin/dhclient -1 -v -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -I -df /var/lib/dhcp/dhclient6.eth0.leases eth0
+root      1233     2  0 17:04 ?        00:00:00 [jbd2/sdb1-8]
+root      1234     2  0 17:04 ?        00:00:00 [ext4-rsv-conver]
+root      1241     1  0 17:04 ?        00:00:00 /sbin/iscsid
+root      1242     1  0 17:04 ?        00:00:00 /sbin/iscsid
+syslog    1249     1  0 17:04 ?        00:00:00 /usr/sbin/rsyslogd -n
+root      1250     1  0 17:04 ?        00:00:00 /usr/bin/lxcfs /var/lib/lxcfs/
+root      1260     1  0 17:04 ?        00:00:00 /usr/sbin/cron -f
+root      1263     1  0 17:04 ?        00:00:00 /lib/systemd/systemd-logind
+message+  1265     1  0 17:04 ?        00:00:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+root      1271     1  0 17:04 ?        00:00:00 /usr/bin/python3 -u /usr/sbin/waagent -daemon
+root      1275     1  0 17:04 ?        00:00:00 /usr/sbin/acpid
+daemon    1278     1  0 17:04 ?        00:00:00 /usr/sbin/atd -f
+root      1290     1  0 17:04 ?        00:00:00 /usr/lib/accountsservice/accounts-daemon
+unscd     1298     1  0 17:04 ?        00:00:00 /usr/sbin/nscd -d
+root      1324     1  0 17:04 ?        00:00:00 /usr/sbin/sshd -D
+root      1325     1  0 17:04 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root      1355     1  0 17:04 ?        00:00:00 /usr/lib/policykit-1/polkitd --no-debug
+root      1363     1  0 17:04 ?        00:00:00 /sbin/mdadm --monitor --pid-file /run/mdadm/monitor.pid --daemonise --scan --syslog
+root      1384     1  0 17:04 ?        00:00:00 /bin/sh /etc/init.d/ondemand background
+root      1391     1  0 17:04 tty1     00:00:00 /sbin/agetty --noclear tty1 linux
+root      1392  1271  1 17:04 ?        00:00:00 python3 -u bin/WALinuxAgent-2.10.0.8-py3.9.egg -run-exthandlers
+root      1396     1  0 17:04 ttyS0    00:00:00 /sbin/agetty --keep-baud 115200 38400 9600 ttyS0 vt220
+root      1409  1384  0 17:04 ?        00:00:00 sleep 60
+root      1438     1  0 17:04 ?        00:00:00 /opt/omi/bin/omiserver -d
+omi       1443  1438  0 17:04 ?        00:00:00 /opt/omi/bin/omiengine -d --logfilefd 3 --socketpair 9
+omsagent  1590     1  0 17:04 ?        00:00:00 /opt/microsoft/omsagent/ruby/bin/ruby /opt/microsoft/omsagent/bin/omsagent -d /var/opt/microsoft/omsagent/552b9630-b106-4fe7-a1fa-97d04a0010ef/run/omsagent.pid -o /var/opt/microsoft/omsagent/552b9630-b106-4fe7-a1fa-97d04a0010ef/log/omsagent.log -c /etc/opt/microsoft/omsagent/552b9630-b106-4fe7-a1fa-97d04a0010ef/conf/omsagent.conf --no-supervisor
+omsagent  1633  1590  0 17:04 ?        00:00:00 sh -c sleep 60 && sudo /opt/microsoft/omsagent/ruby/bin/ruby /opt/microsoft/omsagent/plugin/collectantimalwareinfo.rb
+omsagent  1634  1633  0 17:04 ?        00:00:00 sleep 60
+omsagent  1656  1590  0 17:04 ?        00:00:00 /opt/microsoft/omsagent/plugin/npmd_agent
+omsagent  1666  1590  0 17:04 ?        00:00:00 sh -c sleep 60 && /opt/microsoft/omsagent/plugin/omsbaseline -d /opt/microsoft/omsagent/plugin/
+omsagent  1678  1666  0 17:04 ?        00:00:00 sleep 60
+omsagent  1693  1438  0 17:04 ?        00:00:00 /opt/omi/bin/omiagent 9 10 --destdir / --providerdir /opt/omi/lib --loglevel WARNING
+root      1755  1438  0 17:04 ?        00:00:00 /opt/omi/bin/omiagent 9 10 --destdir / --providerdir /opt/omi/lib --loglevel WARNING
+root      2282  1324  0 17:05 ?        00:00:00 sshd: azureuser [priv]
+azureus+  2294     1  0 17:05 ?        00:00:00 /lib/systemd/systemd --user
+azureus+  2301  2294  0 17:05 ?        00:00:00 (sd-pam)
+azureus+  2382  2282  0 17:05 ?        00:00:00 sshd: azureuser@pts/0
+azureus+  2469  2382  0 17:05 pts/0    00:00:00 /bin/sh -c sudo -H -S  -p "[sudo via ansible, key=arnhnggjhkextslboijgivsdphynhgjd] password:" -u root /bin/sh -c 'echo BECOME-SUCCESS-arnhnggjhkextslboijgivsdphynhgjd ; /usr/bin/python /home/azureuser/.ansible/tmp/ansible-tmp-1714583104.8623867-226589548467179/AnsiballZ_command.py' && sleep 0
+root      2470  2469  0 17:05 pts/0    00:00:00 sudo -H -S -p [sudo via ansible, key=arnhnggjhkextslboijgivsdphynhgjd] password: -u root /bin/sh -c echo BECOME-SUCCESS-arnhnggjhkextslboijgivsdphynhgjd ; /usr/bin/python /home/azureuser/.ansible/tmp/ansible-tmp-1714583104.8623867-226589548467179/AnsiballZ_command.py
+root      2471  2470  0 17:05 pts/0    00:00:00 /bin/sh -c echo BECOME-SUCCESS-arnhnggjhkextslboijgivsdphynhgjd ; /usr/bin/python /home/azureuser/.ansible/tmp/ansible-tmp-1714583104.8623867-226589548467179/AnsiballZ_command.py
+root      2472  2471  0 17:05 pts/0    00:00:00 /usr/bin/python /home/azureuser/.ansible/tmp/ansible-tmp-1714583104.8623867-226589548467179/AnsiballZ_command.py
+root      2475  2472  0 17:05 pts/0    00:00:00 /bin/sh -c (echo -e ' CMD: cat /etc/redhat-release (Display Distribution information) '; cat /etc/redhat-release; echo -e ' CMD: lsb_release -a (Display Distribution information) '; lsb_release -a; echo -e ' CMD: date (Display Date of system) '; date; echo -e ' CMD: ifconfig -a (Nic Card Details with Ips assigned) '; ifconfig -a; echo -e ' CMD: df -Th (Filesystem with sizes and Type) '; df -h; echo -e ' CMD: netstat -planetu (List of Services Running with their Ports) '; netstat -planetu; echo -e ' CMD: uptime (Server Uptime Details) '; uptime; echo -e ' CMD: route -n (Routing Details) '; route -n; echo -e ' CMD: chronyc sources (Chrony Sources) '; chronyc sources; echo -e ' CMD: chronyd status (Chrony Status) '; systemctl status chronyd; echo -e ' CMD: uname -a (Print all information) '; uname -a; echo -e ' CMD: free -h (Memory Details) '; free -h; echo -e ' CMD: cat /etc/fstab (List of Mount Points in the directory) '; cat /etc/fstab; echo -e ' CMD: cat /proc/mounts (List of Mount Points) '; cat /proc/mounts; echo -e ' CMD: cat /etc/exports (List of file systems Exported) '; cat /etc/exports; echo -e ' CMD: (uname -r) Kernel Version '; uname -r; echo -e ' CMD: ip addr list (List of IP Address) '; ip addr list; echo -e ' CMD: lsblk (Disk Allocated) '; lsblk; echo -e ' CMD: cat /proc/cpuinfo | grep -i processor | wc -l (Total Cpus) '; cat /proc/cpuinfo | grep -i processor | wc -l; echo -e ' CMD: dmidecode (Display Product details of Server) '; dmidecode | grep -i Product; echo -e ' CMD: sestatus (Display SELinux status) '; sestatus | grep -i SELinux; echo -e ' CMD: cat /etc/sysconfig/network-scripts/ifcfg* (Display Nic Details)  '; cat /etc/sysconfig/network-scripts/ifcfg*; echo -e ' CMD: ps -ef (Display Process running)  '; ps -ef;) > artifacts_before_shutdown.txt
+root      2476  2475  0 17:05 pts/0    00:00:00 ps -ef
